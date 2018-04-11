@@ -12,8 +12,8 @@ pipeline {
                         def buildInfo = Artifactory.newBuildInfo()
 
                         rtMaven.tool = "maven" // Tool name from Jenkins configuration
-                        rtMaven.deployer releaseRepo:'libs-release-local', snapshotRepo:'libs-snapshot-local', server: server
-                        rtMaven.resolver releaseRepo:'libs-release', snapshotRepo:'libs-snapshot', server: server
+                        rtMaven.deployer releaseRepo:'asteriosoft-release-local', snapshotRepo:'asteriosoft-snapshot-local', server: server
+                        rtMaven.resolver releaseRepo:'asteriosoft-release', snapshotRepo:'asteriosoft-snapshot', server: server
 
                         buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean install -P dev -Dbuild.version=' +
                                 env.BRANCH_NAME + "." + env.BUILD_ID + (env.BRANCH_NAME == 'master' ? '-SNAPSHOT' : '')

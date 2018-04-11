@@ -3,3 +3,6 @@ target
 .idea
 /src/main/resources/application.yml
 /src/main/resources/bootstrap.yml
+.classpath
+.settings
+.project
