@@ -1,0 +1,44 @@
+/**
+ * Data.java
+ * <p>
+ * Copyright 2015-2016 RhythmOne. All Rights Reserved.
+ * <p>
+ * This software is the proprietary information of RhythmOne.
+ * Use is subject to license terms.
+ */
+package com.asteriosoft.openrtb;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * The data and segment objects together allow additional data about the user to be specified. This data
+ * may be from multiple sources whether from the exchange itself or third party providers as specified by
+ * the id field. A bid request can mix data objects from multiple providers. The specific data providers
+ * in use should be published by the exchange a priori to its bidders.
+ */
+@lombok.Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class Data {
+
+    /**
+     * Exchange-specific ID for the data provider.
+     */
+    private String id;
+    /**
+     * Exchange-specific name for the data provider.
+     */
+    private String name;
+    /**
+     * Array of Segment objects that contain the actual data values.
+     *
+     * @see Segment
+     */
+    private List<Segment> segment;
+    /**
+     * Placeholder for exchange-specific extensions to OpenRTB.
+     */
+    private Map<String, Object> ext;
+}

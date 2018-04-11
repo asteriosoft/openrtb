@@ -1,0 +1,49 @@
+/**
+ * Format.java
+ * <p>
+ * Copyright 2015-2016 RhythmOne. All Rights Reserved.
+ * <p>
+ * This software is the proprietary information of RhythmOne.
+ * Use is subject to license terms.
+ */
+package com.asteriosoft.openrtb;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
+
+import java.util.Map;
+
+/**
+ * This object represents an allowed size (i.e., height and width combination) for a banner impression.
+ * These are typically used in an array for an impression where multiple sizes are permitted.
+ */
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class Format {
+
+    /**
+     * Width in device independent pixels (DIPS).
+     */
+    private Integer w;
+    /**
+     * Height in device independent pixels (DIPS).
+     */
+    private Integer h;
+
+    /**
+     * Relative width when expressing size as a ratio.
+     */
+    private Integer wratio;
+    /**
+     * Relative height when expressing size as a ratio.
+     */
+    private Integer hratio;
+    /**
+     * The minimum width in device independent pixels (DIPS) at which the ad will be displayed the size is expressed as a ratio.
+     */
+    private Integer wmin;
+    /**
+     * Placeholder for exchange-specific extensions to OpenRTB.
+     */
+    private Map<String, Object> ext;
+}
