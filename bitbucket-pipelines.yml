@@ -11,11 +11,12 @@ pipelines:
         caches:
           - maven
         script: # Modify the commands below to build your repository.
-          - wget https://dl.bintray.com/jfrog/jfrog-cli-go/1.7.1/jfrog-cli-linux-amd64/jfrog
-          - chmod +x jfrog
+          # - wget https://dl.bintray.com/jfrog/jfrog-cli-go/1.7.1/jfrog-cli-linux-amd64/jfrog
+          # - chmod +x jfrog
           - mvn clean install # -B batch mode makes Maven less verbose
-          - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --apikey $ARTIFACTORY_PASSWORD
-          - ./jfrog rt u "target/*.jar" libs-snapshot-local --build-name=com.asteriosoft.openrtb --build-number=$BITBUCKET_COMMIT --flat=false
-          # - ./jfrog rt u "multi*/*.war" pipeline-generic-local --build-name=pipeline-generic-artifactory --build-number=$BITBUCKET_COMMIT --flat=false
-          - ./jfrog rt bce com.asteriosoft.openrtb $BITBUCKET_COMMIT
-          - ./jfrog rt bp com.asteriosoft.openrtb $BITBUCKET_COMMIT
+          # - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --apikey $ARTIFACTORY_PASSWORD
+          # - ./jfrog rt u "target/*.jar" libs-snapshot-local --build-name=com.asteriosoft.openrtb --build-number=$BITBUCKET_COMMIT --flat=false
+          # # - ./jfrog rt u "multi*/*.war" pipeline-generic-local --build-name=pipeline-generic-artifactory --build-number=$BITBUCKET_COMMIT --flat=false
+          # - ./jfrog rt bce com.asteriosoft.openrtb $BITBUCKET_COMMIT
+          # - ./jfrog rt bp com.asteriosoft.openrtb $BITBUCKET_COMMIT
+          - mvn deploy -Dusername=${ARTIFACTORY_USERNAME} -Dpassword=${ARTIFACTORY_PASSWORD} -Durl=${ARTIFACTORY_URL}
