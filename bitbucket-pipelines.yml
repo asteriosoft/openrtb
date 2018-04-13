@@ -19,4 +19,4 @@ pipelines:
           # # - ./jfrog rt u "multi*/*.war" pipeline-generic-local --build-name=pipeline-generic-artifactory --build-number=$BITBUCKET_COMMIT --flat=false
           # - ./jfrog rt bce com.asteriosoft.openrtb $BITBUCKET_COMMIT
           # - ./jfrog rt bp com.asteriosoft.openrtb $BITBUCKET_COMMIT
-          - mvn deploy -Dusername=${ARTIFACTORY_USERNAME} -Dpassword=${ARTIFACTORY_PASSWORD} -Durl=${ARTIFACTORY_URL} -DaltDeploymentRepository=com.asteriosoft::openrtb::libs-snapshot-local
+          - mvn deploy -Dusername=${ARTIFACTORY_USERNAME} -Dpassword=${ARTIFACTORY_PASSWORD} -Durl=${ARTIFACTORY_URL} -DaltDeploymentRepository=openrtb::default::libs-snapshot-local
