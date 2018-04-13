@@ -6,7 +6,7 @@
 
     <groupId>com.asteriosoft</groupId>
     <artifactId>openrtb</artifactId>
-    <version>${build.version}</version>
+    <version>test</version>
 
     <packaging>jar</packaging>
 
