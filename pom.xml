@@ -76,9 +76,9 @@
                                 <propertiesFile>publish.properties</propertiesFile>
                             </artifactory>
                             <publisher>
-                                <contextUrl>${url}</contextUrl>
-                                <username>${username}</username>
-                                <password>${password}</password>
+                                <contextUrl>${ARTIFACTORY_URL}</contextUrl>
+                                <username>${ARTIFACTORY_USERNAME}</username>
+                                <password>${ARTIFACTORY_PASSWORD}</password>
                                 <excludePatterns>*-tests.jar</excludePatterns>
                                 <repoKey>libs-release-local</repoKey>
                                 <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
