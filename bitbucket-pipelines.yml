@@ -17,5 +17,5 @@ pipelines:
           - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --apikey $ARTIFACTORY_PASSWORD
           - ./jfrog rt u "target/*.jar" libs-snapshot-local --build-name=openrtb --build-number=$BITBUCKET_BUILD_NUMBER --flat=false
           # - ./jfrog rt u "multi*/*.war" pipeline-generic-local --build-name=pipeline-generic-artifactory --build-number=$BITBUCKET_COMMIT --flat=false
-          - ./jfrog rt bce pipeline-generic-artifactory $BITBUCKET_COMMIT
-          - ./jfrog rt bp pipeline-generic-artifactory $BITBUCKET_COMMIT
+          - ./jfrog rt bce com.asteriosoft.openrtb $BITBUCKET_COMMIT
+          - ./jfrog rt bp com.asteriosoft.openrtb $BITBUCKET_COMMIT
