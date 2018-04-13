@@ -14,7 +14,7 @@ pipelines:
           - wget https://dl.bintray.com/jfrog/jfrog-cli-go/1.7.1/jfrog-cli-linux-amd64/jfrog
           - chmod +x jfrog
           - mvn clean install # -B batch mode makes Maven less verbose
-          - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASSWORD
+          - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --apikey $ARTIFACTORY_PASSWORD
           - ./jfrog rt u "multi*/*.jar" pipeline-generic-local --build-name=pipeline-generic-artifactory --build-number=$BITBUCKET_COMMIT --flat=false
           - ./jfrog rt u "multi*/*.war" pipeline-generic-local --build-name=pipeline-generic-artifactory --build-number=$BITBUCKET_COMMIT --flat=false
           - ./jfrog rt bce pipeline-generic-artifactory $BITBUCKET_COMMIT
