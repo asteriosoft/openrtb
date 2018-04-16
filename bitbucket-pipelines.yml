@@ -10,5 +10,17 @@ pipelines:
     - step:
         caches:
           - maven
-        script: # Modify the commands below to build your repository.
-          - mvn clean -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER
+        script:
+          - mvn package
+  master:
+    - step:
+        caches:
+          - maven
+        script:
+          - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER-SNAPSHOT
+  release-*:
+    - step:
+        caches:
+          - maven
+        script:
+          - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER
