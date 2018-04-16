@@ -13,7 +13,7 @@ pipelines:
         script: # Modify the commands below to build your repository.
           # - wget https://dl.bintray.com/jfrog/jfrog-cli-go/1.7.1/jfrog-cli-linux-amd64/jfrog
           # - chmod +x jfrog
-          - mvn clean install -Dbuild.version=$env.BITBUCKET_BRANCH.$env.BITBUCKET_BUILD_NUMBER # -B batch mode makes Maven less verbose
+          - mvn clean install -Dbuild.version=${BITBUCKET_BRANCH}.${BITBUCKET_BUILD_NUMBER} # -B batch mode makes Maven less verbose
           # - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --apikey $ARTIFACTORY_PASSWORD
           # - ./jfrog rt u "target/*.jar" libs-snapshot-local --build-name=com.asteriosoft.openrtb --build-number=$BITBUCKET_COMMIT --flat=false
           # # - ./jfrog rt u "multi*/*.war" pipeline-generic-local --build-name=pipeline-generic-artifactory --build-number=$BITBUCKET_COMMIT --flat=false
