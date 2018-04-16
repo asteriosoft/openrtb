@@ -6,7 +6,7 @@
 
     <groupId>com.asteriosoft</groupId>
     <artifactId>openrtb</artifactId>
-    <version>test</version>
+    <version>${build.version}</version>
 
     <packaging>jar</packaging>
 
@@ -36,11 +36,11 @@
 
     <distributionManagement>
        <snapshotRepository>
-           <id>libs-snapshot-local</id>
+           <id>artifactory.asteriosoft.com</id>
            <url>http://artifactory.asteriosoft.com/artifactory/libs-snapshot-local</url>
        </snapshotRepository>
        <repository>
-           <id>libs-release-local</id>
+           <id>artifactory.asteriosoft.com</id>
            <url>http://artifactory.asteriosoft.com/artifactory/libs-release-local</url>
        </repository>
     </distributionManagement>
