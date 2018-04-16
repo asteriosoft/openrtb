@@ -18,7 +18,7 @@ pipelines:
           - maven
         script:
           - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER-SNAPSHOT
-  deploy-*:
+  test/*:
     - step:
         caches:
           - maven
