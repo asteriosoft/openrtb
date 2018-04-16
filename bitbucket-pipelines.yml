@@ -12,15 +12,16 @@ pipelines:
           - maven
         script:
           - mvn package
-  master:
-    - step:
-        caches:
-          - maven
-        script:
-          - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER-SNAPSHOT
-  deploy-*:
-    - step:
-        caches:
-          - maven
-        script:
-          - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER
+  branches:
+    master:
+      - step:
+          caches:
+            - maven
+          script:
+            - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER-SNAPSHOT
+    deploy-*:
+      - step:
+          caches:
+            - maven
+          script:
+            - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER
