@@ -6,7 +6,7 @@
 
     <groupId>com.asteriosoft</groupId>
     <artifactId>openrtb</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${BITBUCKET_BRANCH.BITBUCKET_BUILD_NUMBER}</version>
 
     <packaging>jar</packaging>
 
