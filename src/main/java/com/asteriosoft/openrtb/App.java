@@ -1,9 +1,9 @@
 /**
  * App.java
  * <p>
- * Copyright 2015-2016 RhythmOne. All Rights Reserved.
+ * Copyright 2017-2018 Asteriosoft. All Rights Reserved.
  * <p>
- * This software is the proprietary information of RhythmOne.
+ * This software is the proprietary information of Asteriosoft.
  * Use is subject to license terms.
  */
 package com.asteriosoft.openrtb;
