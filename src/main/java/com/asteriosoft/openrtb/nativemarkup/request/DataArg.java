@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class DataArg {
+public final class DataArg {
     /**
      * Type ID of the element supported by the publisher. The publisher can display this information in an appropriate format.
      * <br>{@link DataType}

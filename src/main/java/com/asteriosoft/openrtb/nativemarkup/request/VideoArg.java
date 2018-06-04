@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class VideoArg {
+public final class VideoArg {
     /**
      * Content MIME types supported. Popular MIME types include, but are not limited to “video/x-mswmv” for Windows Media, 
      * and “video/x-flv” for Flash Video, or “video/mp4”. Note that native frequently does not support flash.

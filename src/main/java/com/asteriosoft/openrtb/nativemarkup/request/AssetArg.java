@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class AssetArg {
+public final class AssetArg {
     
     /**
      * Unique asset ID, assigned by exchange. Typically a counter for the array.

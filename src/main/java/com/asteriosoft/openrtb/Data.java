@@ -21,7 +21,7 @@ import java.util.Map;
  */
 @lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Data {
+public final class Data {
 
     /**
      * Exchange-specific ID for the data provider.

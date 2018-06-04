@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Pmp {
+public final class Pmp {
 
     /**
      * Indicator of auction eligibility to seats named in the Direct Deals object, where 0 = all bids are accepted,

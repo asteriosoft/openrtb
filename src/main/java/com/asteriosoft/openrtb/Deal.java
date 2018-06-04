@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Deal {
+public final class Deal {
 
     /**
      * A unique identifier for the direct deal.

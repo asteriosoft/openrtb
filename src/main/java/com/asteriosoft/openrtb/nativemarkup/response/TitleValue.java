@@ -8,7 +8,7 @@ import lombok.Data;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class TitleValue {
+public final class TitleValue {
     /**
      * The text associated with the text element.
      * <p>Required.

@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Publisher {
+public final class Publisher {
 
     /**
      * Exchange-specific publisher ID.

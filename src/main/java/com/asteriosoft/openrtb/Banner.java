@@ -28,7 +28,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Banner {
+public final class Banner {
 
     /**
      * Width in device independent pixels (DIPS). If no format objects are specified,

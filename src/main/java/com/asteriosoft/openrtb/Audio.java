@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Audio {
+public final class Audio {
 
     /**
      * Content MIME types supported. Popular MIME types may include "video/x-ms-wmv" for Windows Media

@@ -21,7 +21,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Site {
+public final class Site {
     /**
      * Exchange-specific site ID.
      *

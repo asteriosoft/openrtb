@@ -27,7 +27,7 @@ import java.util.Map;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class BidRequest {
+public final class BidRequest {
 
     /**
      * Unique ID of the bid request, provided by the exchange.

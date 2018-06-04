@@ -10,7 +10,7 @@ import java.util.List;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class NativeMarkupResponse {
+public final class NativeMarkupResponse {
     
     public static final String VERSION = "1.1";
     

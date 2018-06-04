@@ -23,7 +23,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class SeatBid {
+public final class SeatBid {
 
     /**
      * Array of 1+ Bid objects (Section 4.2.3) each related to an impression. Multiple bids can relate to the

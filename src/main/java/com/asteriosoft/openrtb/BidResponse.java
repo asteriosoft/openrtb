@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class BidResponse {
+public final class BidResponse {
 
     /**
      * ID of the bid request to which this is a response.

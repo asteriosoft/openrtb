@@ -14,7 +14,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Source {
+public final class Source {
 
     /**
      * Entity responsible for the final impression sale decision, where 0 = exchange, 1 = upstream source.

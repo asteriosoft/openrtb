@@ -32,7 +32,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Native {
+public final class Native {
 
     /**
      * Request payload complying with the Native Ad Specification.

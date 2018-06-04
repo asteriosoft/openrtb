@@ -21,7 +21,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class App implements Cloneable {
+public final class App implements Cloneable {
     /**
      * Exchange-specific app ID.
      *

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class AssetValue {
+public final class AssetValue {
     /**
      * Unique asset ID, assigned by exchange, must match one of the asset IDs in request.
      * <p>Required.

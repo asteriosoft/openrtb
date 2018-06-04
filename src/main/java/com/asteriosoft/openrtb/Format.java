@@ -19,7 +19,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Format {
+public final class Format {
 
     /**
      * Width in device independent pixels (DIPS).

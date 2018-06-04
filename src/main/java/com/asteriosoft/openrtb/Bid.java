@@ -37,7 +37,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Bid {
+public final class Bid {
 
     /**
      * Bidder generated bid ID to assist with logging/tracking.

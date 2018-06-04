@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Content {
+public final class Content {
 
     /**
      * ID uniquely identifying the content.

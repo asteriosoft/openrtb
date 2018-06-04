@@ -24,7 +24,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Geo {
+public final class Geo {
 
     /**
      * Latitude from -90.0 to +90.0, where negative is south.

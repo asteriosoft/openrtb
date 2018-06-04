@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Metric {
+public final class Metric {
 
     /**
      * Type of metric being presented using exchange curated string names which should be published to bidders a priori.

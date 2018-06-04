@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class DataValue {
+public final class DataValue {
     /**
      * The optional formatted string name of the data type to be displayed.
      * <p>Optional.

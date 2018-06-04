@@ -29,7 +29,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Video {
+public final class Video {
 
     /**
      * Content MIME types supported. Popular MIME types may include "video/x-ms-wmv" for Windows Media

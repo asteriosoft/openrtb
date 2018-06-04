@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class LinkValue {
+public final class LinkValue {
     /**
      * Landing URL of the clickable link.
      * <p>Required.

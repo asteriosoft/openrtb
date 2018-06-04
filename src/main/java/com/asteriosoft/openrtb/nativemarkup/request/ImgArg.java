@@ -11,7 +11,7 @@ import java.util.List;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ImgArg {
+public final class ImgArg {
     /**
      * Type ID of the image element supported by the publisher. The publisher can display this information in an appropriate format.
      * <br>{@link ImgType}

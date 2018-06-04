@@ -8,7 +8,7 @@ import lombok.Data;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class TitleArg {
+public final class TitleArg {
     /**
      * Maximum length of the text in the title element.
      * Recommended to be 25, 90, or 140.

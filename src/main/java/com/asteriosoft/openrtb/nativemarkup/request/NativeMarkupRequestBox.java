@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class NativeMarkupRequestBox {
+public final class NativeMarkupRequestBox {
 
     @JsonProperty("native")
     private NativeMarkupRequest nnative;

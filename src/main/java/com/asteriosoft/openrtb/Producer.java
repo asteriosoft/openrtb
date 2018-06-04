@@ -21,7 +21,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Producer {
+public final class Producer {
 
     /**
      * Content producer or originator ID. Useful if content is syndicated and may be posted on a site using embed tags.

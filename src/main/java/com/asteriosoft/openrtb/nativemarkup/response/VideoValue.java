@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class VideoValue {
+public final class VideoValue {
     /**
      * Vast xml.
      * <p>Required.

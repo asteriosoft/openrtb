@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Segment {
+public final class Segment {
 
     /**
      * ID of the data segment specific to the data provider.

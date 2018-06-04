@@ -30,7 +30,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Device {
+public final class Device {
 
     /**
      * Browser user agent string.

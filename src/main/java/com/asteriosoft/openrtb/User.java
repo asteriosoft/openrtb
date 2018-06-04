@@ -21,7 +21,7 @@ import java.util.Map;
  */
 @lombok.Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class User {
+public final class User {
     /**
      * Exchange-specific ID for the user. At least one of id or buyeruid is recommended.
      *

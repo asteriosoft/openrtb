@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Imp {
+public final class Imp {
 
     public static final String DEFAULT_BIDFLOORCUR = "USD";
 

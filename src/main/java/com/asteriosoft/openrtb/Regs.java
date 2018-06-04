@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Regs {
+public final class Regs {
 
     /**
      * Flag indicating if this request is subject to the COPPA regulations established by the USA FTC, where 0 = no,
