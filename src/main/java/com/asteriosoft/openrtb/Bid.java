@@ -100,6 +100,11 @@ public final class Bid {
      */
     private String iurl;
     /**
+     * Language of the creative using ISO-639-1-alpha-2.
+     * The non-standard code “xx” may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).
+     */
+    private String language;
+    /**
      * Campaign ID to assist with ad quality checking; the collection of creatives for which iurl should
      * be representative.
      */
