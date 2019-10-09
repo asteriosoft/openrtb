@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * This object describes an ad placement or impression being auctioned. A single bid request can include multiple
@@ -30,7 +31,7 @@ public final class Imp {
 
     public static final String DEFAULT_BIDFLOORCUR = "USD";
     @JsonIgnore
-    private Integer hashCode;
+    private Integer customHashCode;
 
     /**
      * A unique identifier for this impression within the context of the bid request
@@ -139,8 +140,11 @@ public final class Imp {
     }
 
     public void setId(String id) {
-        this.hashCode = null;
+        Object old = this.id;
         this.id = id;
+        if (customHashCode != null && !Objects.equals(old, this.id)) {
+            this.customHashCode = null;
+        }
     }
 
     public List<Metric> getMetric() {
@@ -148,8 +152,11 @@ public final class Imp {
     }
 
     public void setMetric(List<Metric> metric) {
-        this.hashCode = null;
+        Object old = this.metric;
         this.metric = metric;
+        if (customHashCode != null && old != this.metric) {
+            this.customHashCode = null;
+        }
     }
 
     public Banner getBanner() {
@@ -157,8 +164,11 @@ public final class Imp {
     }
 
     public void setBanner(Banner banner) {
-        this.hashCode = null;
+        Object old = this.banner;
         this.banner = banner;
+        if (customHashCode != null && old != this.banner) {
+            this.customHashCode = null;
+        }
     }
 
     public Video getVideo() {
@@ -166,8 +176,11 @@ public final class Imp {
     }
 
     public void setVideo(Video video) {
-        this.hashCode = null;
+        Object old = this.video;
         this.video = video;
+        if (customHashCode != null && old != this.video) {
+            this.customHashCode = null;
+        }
     }
 
     public Audio getAudio() {
@@ -175,8 +188,11 @@ public final class Imp {
     }
 
     public void setAudio(Audio audio) {
-        this.hashCode = null;
+        Object old = this.audio;
         this.audio = audio;
+        if (customHashCode != null && old != this.audio) {
+            this.customHashCode = null;
+        }
     }
 
     public Native getNnative() {
@@ -184,8 +200,11 @@ public final class Imp {
     }
 
     public void setNnative(Native nnative) {
-        this.hashCode = null;
+        Object old = this.nnative;
         this.nnative = nnative;
+        if (customHashCode != null && old != this.nnative) {
+            this.customHashCode = null;
+        }
     }
 
     public Pmp getPmp() {
@@ -193,8 +212,11 @@ public final class Imp {
     }
 
     public void setPmp(Pmp pmp) {
-        this.hashCode = null;
+        Object old = this.pmp;
         this.pmp = pmp;
+        if (customHashCode != null && old != this.pmp) {
+            this.customHashCode = null;
+        }
     }
 
     public String getDisplaymanager() {
@@ -202,8 +224,11 @@ public final class Imp {
     }
 
     public void setDisplaymanager(String displaymanager) {
-        this.hashCode = null;
+        Object old = this.displaymanager;
         this.displaymanager = displaymanager;
+        if (customHashCode != null && !Objects.equals(old, this.displaymanager)) {
+            this.customHashCode = null;
+        }
     }
 
     public String getDisplaymanagerver() {
@@ -211,8 +236,11 @@ public final class Imp {
     }
 
     public void setDisplaymanagerver(String displaymanagerver) {
-        this.hashCode = null;
+        Object old = this.displaymanagerver;
         this.displaymanagerver = displaymanagerver;
+        if (customHashCode != null && !Objects.equals(old, this.displaymanagerver)) {
+            this.customHashCode = null;
+        }
     }
 
     public Integer getInstl() {
@@ -220,8 +248,11 @@ public final class Imp {
     }
 
     public void setInstl(Integer instl) {
-        this.hashCode = null;
+        Object old = this.instl;
         this.instl = instl;
+        if (customHashCode != null && !Objects.equals(old, this.instl)) {
+            this.customHashCode = null;
+        }
     }
 
     public String getTagid() {
@@ -229,8 +260,11 @@ public final class Imp {
     }
 
     public void setTagid(String tagid) {
-        this.hashCode = null;
+        Object old = this.tagid;
         this.tagid = tagid;
+        if (customHashCode != null && !Objects.equals(old, this.tagid)) {
+            this.customHashCode = null;
+        }
     }
 
     public BigDecimal getBidfloor() {
@@ -238,8 +272,11 @@ public final class Imp {
     }
 
     public void setBidfloor(BigDecimal bidfloor) {
-        this.hashCode = null;
+        Object old = this.bidfloor;
         this.bidfloor = bidfloor;
+        if (customHashCode != null && !Objects.equals(old, this.bidfloor)) {
+            this.customHashCode = null;
+        }
     }
 
     public String getBidfloorcur() {
@@ -247,8 +284,11 @@ public final class Imp {
     }
 
     public void setBidfloorcur(String bidfloorcur) {
-        this.hashCode = null;
+        Object old = this.bidfloorcur;
         this.bidfloorcur = bidfloorcur;
+        if (customHashCode != null && !Objects.equals(old, this.bidfloorcur)) {
+            this.customHashCode = null;
+        }
     }
 
     public Integer getClickbrowser() {
@@ -256,8 +296,11 @@ public final class Imp {
     }
 
     public void setClickbrowser(Integer clickbrowser) {
-        this.hashCode = null;
+        Object old = this.clickbrowser;
         this.clickbrowser = clickbrowser;
+        if (customHashCode != null && !Objects.equals(old, this.clickbrowser)) {
+            this.customHashCode = null;
+        }
     }
 
     public Integer getSecure() {
@@ -265,8 +308,11 @@ public final class Imp {
     }
 
     public void setSecure(Integer secure) {
-        this.hashCode = null;
+        Object old = this.secure;
         this.secure = secure;
+        if (customHashCode != null && !Objects.equals(old, this.secure)) {
+            this.customHashCode = null;
+        }
     }
 
     public List<String> getIframebuster() {
@@ -274,8 +320,11 @@ public final class Imp {
     }
 
     public void setIframebuster(List<String> iframebuster) {
-        this.hashCode = null;
+        Object old = this.iframebuster;
         this.iframebuster = iframebuster;
+        if (customHashCode != null && old != this.iframebuster) {
+            this.customHashCode = null;
+        }
     }
 
     public Integer getExp() {
@@ -283,8 +332,11 @@ public final class Imp {
     }
 
     public void setExp(Integer exp) {
-        this.hashCode = null;
+        Object old = this.exp;
         this.exp = exp;
+        if (customHashCode != null && !Objects.equals(old, this.exp)) {
+            this.customHashCode = null;
+        }
     }
 
     public Map<String, Object> getExt() {
@@ -292,8 +344,11 @@ public final class Imp {
     }
 
     public void setExt(Map<String, Object> ext) {
-        this.hashCode = null;
+        Object old = this.ext;
         this.ext = ext;
+        if (customHashCode != null && old != this.ext) {
+            this.customHashCode = null;
+        }
     }
 
     @Override
@@ -327,28 +382,32 @@ public final class Imp {
 
     @Override
     public int hashCode() {
-        if (hashCode == null) {
-            int result = id != null ? id.hashCode() : 0;
-            result = 31 * result + (metric != null ? metric.hashCode() : 0);
-            result = 31 * result + (banner != null ? banner.hashCode() : 0);
-            result = 31 * result + (video != null ? video.hashCode() : 0);
-            result = 31 * result + (audio != null ? audio.hashCode() : 0);
-            result = 31 * result + (nnative != null ? nnative.hashCode() : 0);
-            result = 31 * result + (pmp != null ? pmp.hashCode() : 0);
-            result = 31 * result + (displaymanager != null ? displaymanager.hashCode() : 0);
-            result = 31 * result + (displaymanagerver != null ? displaymanagerver.hashCode() : 0);
-            result = 31 * result + (instl != null ? instl.hashCode() : 0);
-            result = 31 * result + (tagid != null ? tagid.hashCode() : 0);
-            result = 31 * result + (bidfloor != null ? bidfloor.hashCode() : 0);
-            result = 31 * result + (bidfloorcur != null ? bidfloorcur.hashCode() : 0);
-            result = 31 * result + (clickbrowser != null ? clickbrowser.hashCode() : 0);
-            result = 31 * result + (secure != null ? secure.hashCode() : 0);
-            result = 31 * result + (iframebuster != null ? iframebuster.hashCode() : 0);
-            result = 31 * result + (exp != null ? exp.hashCode() : 0);
-            result = 31 * result + (ext != null ? ext.hashCode() : 0);
-            hashCode = result;
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (metric != null ? metric.hashCode() : 0);
+        result = 31 * result + (banner != null ? banner.hashCode() : 0);
+        result = 31 * result + (video != null ? video.hashCode() : 0);
+        result = 31 * result + (audio != null ? audio.hashCode() : 0);
+        result = 31 * result + (nnative != null ? nnative.hashCode() : 0);
+        result = 31 * result + (pmp != null ? pmp.hashCode() : 0);
+        result = 31 * result + (displaymanager != null ? displaymanager.hashCode() : 0);
+        result = 31 * result + (displaymanagerver != null ? displaymanagerver.hashCode() : 0);
+        result = 31 * result + (instl != null ? instl.hashCode() : 0);
+        result = 31 * result + (tagid != null ? tagid.hashCode() : 0);
+        result = 31 * result + (bidfloor != null ? bidfloor.hashCode() : 0);
+        result = 31 * result + (bidfloorcur != null ? bidfloorcur.hashCode() : 0);
+        result = 31 * result + (clickbrowser != null ? clickbrowser.hashCode() : 0);
+        result = 31 * result + (secure != null ? secure.hashCode() : 0);
+        result = 31 * result + (iframebuster != null ? iframebuster.hashCode() : 0);
+        result = 31 * result + (exp != null ? exp.hashCode() : 0);
+        result = 31 * result + (ext != null ? ext.hashCode() : 0);
+        return result;
+    }
+
+    public Integer customHashCode() {
+        if (customHashCode == null) {
+            customHashCode = hashCode();
         }
-        return hashCode;
+        return customHashCode;
     }
 
     public Imp copy() {
@@ -370,7 +429,7 @@ public final class Imp {
         res.setPmp(getPmp());
         res.setSecure(getSecure());
         res.setTagid(getTagid());
-        res.hashCode = hashCode;
+        res.customHashCode = customHashCode;
         return res;
     }
 }
