@@ -1,6 +1,7 @@
 package com.asteriosoft.openrtb.nativemarkup.response;
 
 
+import com.asteriosoft.openrtb.nativemarkup.ImgType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
@@ -11,6 +12,13 @@ import lombok.Data;
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public final class ImgValue {
+    /**
+     * Type ID
+     * <br>{@link ImgType}
+     *
+     * <p>Optional
+     */
+    private Integer type;
     /**
      * Url to the image asset.
      * <p>Required.

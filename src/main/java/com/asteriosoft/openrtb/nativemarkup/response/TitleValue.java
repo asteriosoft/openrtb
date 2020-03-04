@@ -14,4 +14,10 @@ public final class TitleValue {
      * <p>Required.
      */
     private String text;
+    /**
+     * Maximum length of the text in the element’s response.
+     *
+     * <p>Optional
+     */
+    private Integer len;
 }
