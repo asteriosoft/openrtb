@@ -50,5 +50,5 @@ public final class NativeMarkupResponse {
      * declared	supported methods in the request.
      * <p>Optional.
      */
-    private List<String> eventtrackers;
+    private List<EventTracker> eventtrackers;
 }
