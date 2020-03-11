@@ -8,6 +8,7 @@
  */
 package com.asteriosoft.openrtb;
 
+import com.asteriosoft.openrtb.nativemarkup.request.NativeMarkupRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
@@ -40,6 +41,10 @@ public final class Native {
      * <b>Required attribute.</b>
      */
     private String request;
+    /**
+     * <b>Optional</b>
+     */
+    private NativeMarkupRequest requestobj;
     /**
      * Version of the Dynamic Native Ads API to which request complies; highly recommended for efficient parsing.
      *
