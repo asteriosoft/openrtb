@@ -19,7 +19,7 @@ public final class NativeMarkupResponse {
      * <p>Optional.
      */
     private String ver;
-    
+
     /**
      * List of native ad’s assets.
      * <p>Required.
@@ -38,10 +38,17 @@ public final class NativeMarkupResponse {
      * <p>Optional.
      */
     private List<String> imptrackers;
-    
+
     /**
      * Optional JavaScript impression tracker. This is a valid HTML, Javascript is already wrapped in <script> tags.
-     * It should be executed at impression time where it can be supported. 
+     * It should be executed at impression time where it can be supported.
      */
     private String jstracker;
+
+    /**
+     * Array of {@link EventTracker} to run	with the ad, in	response to	the
+     * declared	supported methods in the request.
+     * <p>Optional.
+     */
+    private List<EventTracker> eventtrackers;
 }
