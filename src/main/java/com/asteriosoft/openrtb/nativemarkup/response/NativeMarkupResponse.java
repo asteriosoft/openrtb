@@ -12,7 +12,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public final class NativeMarkupResponse {
     
-    public static final String VERSION = "1.1";
+    public static final String VERSION = "1.2";
     
     /**
      * Version of the Native Markup version in use. Default 1.1
