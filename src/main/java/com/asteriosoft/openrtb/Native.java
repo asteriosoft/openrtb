@@ -36,11 +36,11 @@ import java.util.Map;
 public final class Native {
 
     /**
-     * Request payload complying with the Native Ad Specification.
+     * Request payload complying with the Native Ad Specification. May be String or NativeMarkupRequest object
      *
      * <b>Required attribute.</b>
      */
-    private String request;
+    private Object request;
     /**
      * <b>Optional</b>
      */
