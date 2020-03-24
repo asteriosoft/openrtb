@@ -77,9 +77,9 @@ public final class Bid {
     private String lurl;
     /**
      * Optional means of conveying ad markup in case the bid wins; supersedes the win notice if markup is
-     * included in both.
+     * included in both. May be String or AdmObject object
      */
-    private String adm;
+    private Object adm;
     /**
      * Optional
      */
