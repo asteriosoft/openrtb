@@ -50,6 +50,35 @@ public final class Video {
      * Recommended attribute.
      */
     private Integer maxduration;
+
+    /**
+     * Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll ad placements.
+     *
+     * Recommended attribute.
+     */
+    private Integer startdelay;
+
+    /**
+     * Indicates the maximum number of ads that may be served into
+     * a “dynamic” video ad pod (where the precise number of ads is
+     * not predetermined by the seller). See Section 7.6 for more
+     * details.
+     * Recommended attribute.
+     */
+    private Integer maxseq;
+
+    /**
+     * Indicates the total amount of time in seconds that advertisers
+     * may fill for a “dynamic” video ad pod (See Section 7.6 for more
+     * details), or the dynamic portion of a “hybrid” ad pod. This field
+     * is required only for the dynamic portion(s) of video ad pods.
+     * This field refers to the length of the entire ad break, whereas
+     * minduration/maxduration/rqddurs are constraints relating to
+     * the slots that make up the pod.
+     * Recommended attribute.
+     */
+    private Integer poddur;
+
     /**
      * Array of supported video protocols. At least one supported protocol must be specified in either the protocol or protocols attribute.
      *
@@ -76,12 +105,34 @@ public final class Video {
      * Recommended attribute.
      */
     private Integer h;
+
     /**
-     * Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll ad placements.
-     *
-     * Recommended attribute.
+     * Unique identifier indicating that an impression opportunity
+     * belongs to a video ad pod. If multiple impression opportunities
+     * within a bid request share the same podid, this indicates that
+     * those impression opportunities belong to the same video ad
+     * pod.
      */
-    private Integer startdelay;
+    private String podid;
+
+    /**
+     * The sequence (position) of the video ad pod within a
+     * content stream. Refer to List: Pod Sequence in AdCOM 1.0
+     * for guidance on the use of this field.
+     * Default: 0
+     */
+    private Integer podseq;
+
+    /**
+     * Precise acceptable durations for video creatives in
+     * seconds. This field specifically targets the Live TV use case
+     * where non-exact ad durations would result in undesirable
+     * ‘dead air’. This field is mutually exclusive with minduration
+     * and maxduration; if rqddurs is specified, minduration and
+     * maxduration must not be specified and vice versa.
+     */
+    private List<Integer> rqddurs;
+
     /**
      * Placement type for the impression. Refer to List 5.9
      */
@@ -113,6 +164,23 @@ public final class Video {
      * the coordinated delivery of multiple creatives.
      */
     private Integer sequence;
+
+    /**
+     * For video ad pods, this value indicates that the seller can
+     * guarantee delivery against the indicated slot position in the
+     * pod. Refer to List: Slot Position in Pod in AdCOM 1.0 guidance
+     * on the use of this field.
+     * Default: 0
+     */
+    private Integer slotinpod;
+
+    /**
+     * Minimum CPM per second. This is a price floor for the
+     * “dynamic” portion of a video ad pod, relative to the duration
+     * of bids an advertiser may submit.
+     */
+    private Integer mincpmpersec;
+
     /**
      * Blocked creative attributes.
      */

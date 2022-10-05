@@ -78,6 +78,14 @@ public final class Content {
      * URL of the content, for buy-side contextualization or review.
      */
     private String url;
+
+    /**
+     * The taxonomy in use. Refer to the AdCOM list List: Category
+     * Taxonomies for values.
+     * Default: 1
+     */
+    private Integer cattax;
+
     /**
      * Array of IAB content categories that describe the content producer.
      */

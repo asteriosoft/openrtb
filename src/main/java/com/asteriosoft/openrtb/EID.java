@@ -1,0 +1,31 @@
+package com.asteriosoft.openrtb;
+
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
+
+import java.util.List;
+import java.util.Map;
+
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public final class EID {
+
+    /**
+     * Source or technology provider responsible for the set of
+     * included IDs. Expressed as a top-level domain.
+     */
+    private String source;
+
+    /**
+     * Array of extended ID UID objects from the given source. Refer
+     * to 3.2.28 Extended Identifier UIDs
+     */
+    private List<UID> uids;
+
+    /**
+     * Placeholder for vendor specific extensions to this object
+     */
+    private Map<String, Object> ext;
+
+}

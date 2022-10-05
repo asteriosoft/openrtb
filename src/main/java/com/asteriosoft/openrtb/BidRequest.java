@@ -129,6 +129,13 @@ public final class BidRequest {
      * Blocked advertiser categories using the IAB content categories.
      */
     private List<String> bcat;
+
+    /**
+     * The taxonomy in use for bcat. Refer to the AdCOM
+     * 1.0 list List: Category Taxonomies for values
+     */
+    private Integer cattax;
+
     /**
      * Block list of advertisers by their domains (e.g., "ford.com").
      */

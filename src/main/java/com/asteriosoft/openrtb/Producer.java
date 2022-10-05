@@ -31,6 +31,14 @@ public final class Producer {
      * Content producer or originator name (e.g., "Warner Bros").
      */
     private String name;
+
+    /**
+     * The taxonomy in use. Refer to the AdCOM list List: Category
+     * Taxonomies for values.
+     * Default: 1
+     */
+    private Integer cattax;
+
     /**
      * Array of IAB content categories that describe the content producer.
      */

@@ -27,6 +27,21 @@ public final class Regs {
      * 1 = yes.
      */
     private Integer coppa;
+
+    /**
+     * Flag that indicates whether or not the request is subject to
+     * GDPR regulations 0 = No, 1 = Yes, omission indicates
+     * Unknown. Refer to Section 7.5 for more information.
+     */
+    private Integer gdpr;
+
+    /**
+     * Communicates signals regarding consumer privacy under US
+     * privacy regulation. See US Privacy String specifications. Refer
+     * to Section 7.5 for more information.
+     */
+    private Integer us_privacy;
+
     /**
      * Placeholder for exchange-specific extensions to OpenRTB.
      */
