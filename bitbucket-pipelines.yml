@@ -19,6 +19,12 @@ pipelines:
             - maven
           script:
             - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER-SNAPSHOT
+    openrtb-2.6:
+      - step:
+          caches:
+            - maven
+          script:
+            - mvn -s settings.xml deploy -Dbuild.version=$BITBUCKET_BRANCH.$BITBUCKET_BUILD_NUMBER-SNAPSHOT
     release-*:
       - step:
           caches:
