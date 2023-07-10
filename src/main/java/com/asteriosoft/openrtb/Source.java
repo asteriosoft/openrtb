@@ -41,7 +41,7 @@ public final class Source {
      * 3.2.25)
      * Recommended attribute.
      */
-    private String schain;
+    private SupplyChain schain;
 
     /**
      * Placeholder for exchange - specific extensions to OpenRTB.
