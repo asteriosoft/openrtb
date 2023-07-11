@@ -40,7 +40,7 @@ public final class Regs {
      * privacy regulation. See US Privacy String specifications. Refer
      * to Section 7.5 for more information.
      */
-    private Integer us_privacy;
+    private String us_privacy;
 
     /**
      * Placeholder for exchange-specific extensions to OpenRTB.
