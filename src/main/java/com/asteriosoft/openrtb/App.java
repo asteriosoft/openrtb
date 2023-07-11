@@ -30,57 +30,70 @@ import java.util.Map;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public final class App implements Cloneable {
+public final class App {
     /**
      * Exchange-specific app ID.
      *
      * Recommended attribiute.
      */
-    protected String id;
+    private String id;
     /**
      * App name (may be aliased at the publisher's request).
      */
-    protected String name;
+    private String name;
     /**
      * Domain of the app (e.g., "mygame.foo.com").
      */
-    protected String domain;
+    private String domain;
+
+    /**
+     * App store URL for an installed app; for IQG 2.1 compliance.
+     */
+    private String storeUrl;
+
+    /**
+     * The taxonomy in use. Refer to the AdCOM list List: Category
+     * Taxonomies for values.
+     * Default: 1
+     */
+    private Integer cattax;
+
     /**
      * Array of IAB content categories of the app.
      */
-    protected List<String> cat;
+    private List<String> cat;
     /**
      * Array of IAB content categories that describe the current section of the app.
      */
-    protected List<String> sectioncat;
+    private List<String> sectioncat;
     /**
      * Array of IAB content categories that describe the current page or view of the app.
      */
-    protected List<String> pagecat;
+    private List<String> pagecat;
     /**
      * Indicates if the app has a privacy policy, where 0 = no, 1 = yes.
      */
-    protected Integer privacypolicy;
+    private Integer privacypolicy;
     /**
      * Details about the Publisher of the app.
      *
      * @see Publisher
      */
-    protected Publisher publisher;
+    private Publisher publisher;
     /**
      * Details about the Content within the app.
      *
      * @see Content
      */
-    protected Content content;
+    private Content content;
     /**
      * Comma separated list of keywords about the app.
      */
-    protected String keywords;
+    private String keywords;
     /**
      * Placeholder for exchange-specific extensions to OpenRTB.
      */
-    protected Map<String, Object> ext;
+    private Map<String, Object> ext;
     /**
      * Application bundle or package name (e.g., com.foo.mygame); intended to be a unique ID across exchanges.
      */

@@ -39,6 +39,14 @@ public final class Publisher {
      * Publisher name (may be aliased at the publisher's request).
      */
     private String name;
+
+    /**
+     * The taxonomy in use. Refer to the AdCOM list List: Category
+     * Taxonomies for values.
+     * Default: 1
+     */
+    private Integer cattax;
+
     /**
      * Array of IAB content categories that describe the publisher.
      */

@@ -131,6 +131,14 @@ public final class Bid {
      * The specific usage and meaning of the tactic ID should be communicated between buyer and exchanges a priori.
      */
     private String tactic;
+
+    /**
+     * The taxonomy in use. Refer to the AdCOM list List: Category
+     * Taxonomies for values.
+     * Default: 1
+     */
+    private Integer cattax;
+
     /**
      * IAB content categories of the creative.
      */
@@ -139,9 +147,19 @@ public final class Bid {
      * Set of attributes describing the creative.
      */
     private List<Integer> attr;
+
+    /**
+     * List of supported APIs for the markup. If an API is not explicitly
+     * listed, it is assumed to be unsupported. Refer to List: API
+     * Frameworks in AdCOM 1.0.
+     */
+    private List<Integer> apis;
+
     /**
      * API required by the markup if applicable.
+     * @deprecated
      */
+    @Deprecated
     private Integer api;
     /**
      * Video response protocol of the markup if applicable.
@@ -175,6 +193,32 @@ public final class Bid {
      * Advisory as to the number of seconds the bidder is willing to wait between the auction and the actual impression.
      */
     private Integer exp;
+
+    /**
+     * Duration of the video or audio creative in seconds.
+     */
+    private Integer dur;
+
+    /**
+     * Type of the creative markup so that it can properly be
+     * associated with the right sub-object of the BidRequest.Imp.
+     * Values:
+     * 1 = Banner
+     * 2 = Video,
+     * 3 = Audio
+     * 4 = Native
+     */
+    private Integer mtype;
+
+    /**
+     * Indicates that the bid response is only eligible for a specific
+     * position within a video or audio ad pod (e.g. first position,
+     * last position, or any). Refer to List: Slot Position in Pod in
+     * AdCOM 1.0 for guidance on the use of this field.
+     * Default: 0
+     */
+    private Integer slotinpod;
+
     /**
      * Placeholder for bidder-specific extensions to OpenRTB.
      */

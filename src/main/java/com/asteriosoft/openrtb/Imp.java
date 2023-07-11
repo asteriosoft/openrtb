@@ -133,6 +133,31 @@ public final class Imp {
      * Array of exchange-specific names of supported iframe busters.
      */
     private List<String> iframebuster;
+
+    /**
+     * Indicates whether the user receives a reward for viewing the
+     * ad, where 0 = no, 1 = yes. Typically video ad implementations
+     * allow users to read an additional news article for free, receive
+     * an extra life in a game, or get a sponsored ad-free music
+     * session. The reward is typically distributed after the video ad is
+     * completed.
+     * <p>
+     * Default: 0
+     */
+    private Integer rwdd;
+
+    /**
+     * Indicates if server-side ad insertion (e.g., stitching an ad into an
+     * audio or video stream) is in use and the impact of this on asset
+     * and tracker retrieval, where 0 = status unknown, 1 = all client-
+     * side (i.e., not server-side), 2 = assets stitched server-side but
+     * tracking pixels fired client-side, 3 = all server-side.
+     * <p>
+     * Default: 0
+     */
+    private Integer ssai;
+
+
     /**
      * Advisory as to the number of seconds that may elapse between the auction and the actual impression.
      */

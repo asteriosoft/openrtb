@@ -36,51 +36,59 @@ public final class Site {
      *
      * Recommended attribiute.
      */
-    protected String id;
+    private String id;
     /**
      * Site name (may be aliased at the publisher's request).
      */
-    protected String name;
+    private String name;
     /**
      * Domain of the site (e.g., "mysite.foo.com").
      */
-    protected String domain;
+    private String domain;
+
+    /**
+     * The taxonomy in use. Refer to the AdCOM list List: Category
+     * Taxonomies for values. If no cattax field is supplied IAB Content
+     * Category Taxonomy 1.0 is assumed.
+     */
+    private Integer cattax;
+
     /**
      * Array of IAB content categories of the site.
      */
-    protected List<String> cat;
+    private List<String> cat;
     /**
      * Array of IAB content categories that describe the current section of the site.
      */
-    protected List<String> sectioncat;
+    private List<String> sectioncat;
     /**
      * Array of IAB content categories that describe the current page or view of the site.
      */
-    protected List<String> pagecat;
+    private List<String> pagecat;
     /**
      * Indicates if the app has a privacy policy, where 0 = no, 1 = yes.
      */
-    protected Integer privacypolicy;
+    private Integer privacypolicy;
     /**
      * Details about the Publisher of the app.
      *
      * @see Publisher
      */
-    protected Publisher publisher;
+    private Publisher publisher;
     /**
      * Details about the Content within the app.
      *
      * @see Content
      */
-    protected Content content;
+    private Content content;
     /**
      * Comma separated list of keywords about the app.
      */
-    protected String keywords;
+    private String keywords;
     /**
      * Placeholder for exchange-specific extensions to OpenRTB.
      */
-    protected Map<String, Object> ext;
+    private Map<String, Object> ext;
     /**
      * URL of the page where the impression will be shown.
      */
