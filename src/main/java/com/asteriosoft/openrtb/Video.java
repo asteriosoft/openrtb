@@ -146,6 +146,11 @@ public final class Video {
      * Placement type for the impression. Refer to List 5.9
      */
     private Integer placement;
+
+    /**
+     * Video placement type for the impression. Refer to List: Plcmt Subtypes - Video in AdCOM 1.0.
+     */
+    private Integer plcmt;
     /**
      * Indicates if the impression must be linear, nonlinear, etc. If none specified, assume all are allowed.
      */

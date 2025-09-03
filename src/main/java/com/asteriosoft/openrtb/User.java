@@ -33,14 +33,12 @@ import java.util.Map;
 public final class User {
     /**
      * Exchange-specific ID for the user. At least one of id or buyeruid is recommended.
-     *
      * Recommended attribute.
      */
     private String id;
     /**
      * Buyer-specific ID for the user as mapped by the exchange for the buyer. At least one of buyeruid
      * or id is recommended.
-     *
      * Recommended attribute.
      */
     private String buyeruid;
@@ -77,5 +75,10 @@ public final class User {
     /**
      * Placeholder for exchange-specific extensions to OpenRTB.
      */
+
+    private String consent;
+
+    private List<Object> eids;
+
     private Map<String, Object> ext;
 }

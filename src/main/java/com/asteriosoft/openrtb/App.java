@@ -45,12 +45,6 @@ public final class App {
      * Domain of the app (e.g., "mygame.foo.com").
      */
     private String domain;
-
-    /**
-     * App store URL for an installed app; for IQG 2.1 compliance.
-     */
-    private String storeUrl;
-
     /**
      * The taxonomy in use. Refer to the AdCOM list List: Category
      * Taxonomies for values.
