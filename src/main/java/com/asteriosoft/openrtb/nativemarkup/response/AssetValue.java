@@ -20,6 +20,8 @@ package com.asteriosoft.openrtb.nativemarkup.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.util.Map;
+
 /**
  * Corresponds to the Asset Object in the request.  The main container object for each asset
  * requested or supported by Exchange on behalf of the rendering client.  Any object that is
@@ -71,4 +73,6 @@ public final class AssetValue {
      * <p>Optional.
      */
     private LinkValue link;
+
+    private Map<String, Object> ext;
 }

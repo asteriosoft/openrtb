@@ -23,6 +23,8 @@ import com.asteriosoft.openrtb.nativemarkup.ImgType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
+import java.util.Map;
+
 /**
  * Corresponds to the Image Object in the request.   The Image object to be used for all image
  * elements of the Native ad such as Icons, Main Image, etc.
@@ -52,5 +54,7 @@ public final class ImgValue {
      * <p>Required.
      */
     private Integer h;
+
+    private Map<String, Object> ext;
 
 }

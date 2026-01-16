@@ -22,6 +22,8 @@ package com.asteriosoft.openrtb.nativemarkup.response;
 import com.asteriosoft.openrtb.nativemarkup.DataType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.util.Map;
+
 /**
  * \
  * Corresponds to the Data Object in the request, with the value filled in.  The Data Object is to be
@@ -56,5 +58,7 @@ public final class DataValue {
      * <p>Required
      */
     private String value;
+
+    private Map<String, Object> ext;
 
 }

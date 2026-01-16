@@ -21,6 +21,8 @@ package com.asteriosoft.openrtb.nativemarkup.response;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
+import java.util.Map;
+
 /**
  * Corresponds to the Title Object in the request, with the value filled in.
  */
@@ -38,4 +40,6 @@ public final class TitleValue {
      * <p>Optional
      */
     private Integer len;
+
+    private Map<String, Object> ext;
 }
