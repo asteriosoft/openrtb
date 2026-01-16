@@ -17,6 +17,9 @@
  */
 package com.asteriosoft.openrtb;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
@@ -28,16 +31,16 @@ import java.util.Map;
 /**
  * A SeatBid object contains one or more Bid objects, each of which relates to a specific impression in the
  * bid request via the impid attribute and constitutes an offer to buy that impression for a given price.
- *
+ * <p>
  * For each bid, the nurl attribute contains the win notice URL. If the bidder wins the impression, the exchange
  * calls this notice URL to inform the bidder of the win and to convey certain information using substitution
  * macros such as the clearing price. The win notice return or the adm attribute can be used to serve markup.
  * In either case, the exchange will also apply the aforementioned substitution to any macros found in the markup.
- *
+ * <p>
  * BEST PRACTICE: The essential function of the win notice is to inform a bidder that they won an auction.
  * It does not necessarily imply ad delivery, creative viewability, or billability. Exchanges are highly encouraged
  * to publish to their bidders their event triggers, billing policies, and any other meaning they attach to the win notice.
- *
+ * <p>
  * Several other attribute are used for ad quality checks or enforcing publisher restrictions. These include
  * the advertiser domain via adomain, a non-cache-busted URL to an image representative of the content of the
  * campaign via iurl, an ID of the campaign and of the creative within the campaign via cid and crid respective,
@@ -50,13 +53,13 @@ public final class Bid {
 
     /**
      * Bidder generated bid ID to assist with logging/tracking.
-     *
+     * <p>
      * <b>Required attribute.</b>
      */
     private String id;
     /**
      * ID of the Imp object in the related bid request.
-     *
+     * <p>
      * <b>Required attribute.</b>
      */
     private String impid;
@@ -64,7 +67,7 @@ public final class Bid {
      * Bid price expressed as CPM although the actual transaction is for a unit impression only. Note that
      * while the type indicates Float, integer math is highly recommended when handling currencies
      * (e.g., BigDecimal in Java).
-     *
+     * <p>
      * <b>Required attribute.</b>
      */
     private BigDecimal price;
@@ -157,6 +160,7 @@ public final class Bid {
 
     /**
      * API required by the markup if applicable.
+     *
      * @deprecated
      */
     @Deprecated
@@ -223,6 +227,22 @@ public final class Bid {
      * Placeholder for bidder-specific extensions to OpenRTB.
      */
     private Map<String, Object> ext;
+
+    @JsonIgnore
+    private Map<String, Object> nonOpenRtbFields;
+
+    @JsonAnySetter
+    public void addNonOpenRtbField(String key, Object value) {
+        if (nonOpenRtbFields == null) {
+            nonOpenRtbFields = new HashMap<>();
+        }
+        nonOpenRtbFields.put(key, value);
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getNonOpenRtbFields() {
+        return nonOpenRtbFields;
+    }
 
     public void addExt(String key, Object value) {
         if (ext == null) {
