@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * The Image object to be used for all image elements of the Native ad such as Icons, Main Image, etc
@@ -75,4 +76,6 @@ public final class ImgArg {
      *  <p>Optional
      */
     private List<String> mimes;
+
+    private Map<String, Object> ext;
 }

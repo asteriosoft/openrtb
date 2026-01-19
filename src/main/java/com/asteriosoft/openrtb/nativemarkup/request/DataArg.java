@@ -21,6 +21,8 @@ package com.asteriosoft.openrtb.nativemarkup.request;
 import com.asteriosoft.openrtb.nativemarkup.DataType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.util.Map;
+
 /**
  * The Data Object is to be used for all non-core elements of the native unit such as Brand Name,
  * Ratings, Review Count, Stars, Download count, descriptions etc. It is also generic for future 
@@ -43,4 +45,6 @@ public final class DataArg {
      * <p>Optional
      */
     private Integer len;
+
+    private Map<String, Object> ext;
 }

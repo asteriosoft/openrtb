@@ -21,18 +21,20 @@ package com.asteriosoft.openrtb.nativemarkup.response;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
+import java.util.Map;
+
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public final class EventTracker {
 
     /**
-     * Type	of event to	track.
+     * Type of event to track. {@link com.asteriosoft.openrtb.nativemarkup.EventType}
      *
      * <p>Required
      */
     private Integer event;
     /**
-     * Type	of tracking requested.
+     * Type of tracking requested. {@link com.asteriosoft.openrtb.nativemarkup.TrackingMethod}
      *
      * <p>Required
      */
@@ -43,4 +45,16 @@ public final class EventTracker {
      * <p>Optional
      */
     private String url;
+
+    /**
+     * To be agreed individually with the exchange, an array of key:value objects for custom tracking,
+     * for example the account number of the DSP with a tracking company. IE {“accountnumber”:”123”}.
+     */
+    private Map<String, String> customdata;
+
+    /**
+     * This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the
+     * standard defined in this specification
+     */
+    private Map<String, Object> ext;
 }

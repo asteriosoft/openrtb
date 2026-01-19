@@ -21,6 +21,8 @@ package com.asteriosoft.openrtb.nativemarkup.request;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
+import java.util.Map;
+
 /**
  * The Title object is to be used for title element of the Native ad.
  */
@@ -34,4 +36,6 @@ public final class TitleArg {
      * <p>Required
      */
     private Integer len;
+
+    private Map<String, Object> ext;
 }

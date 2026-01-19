@@ -21,6 +21,8 @@ package com.asteriosoft.openrtb.nativemarkup.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.util.Map;
+
 /**
  * The main container object for each asset requested or supported by Exchange on behalf of the rendering client. 
  * Any object that is required is to be flagged as such. Only one of the {title,img,video,data} objects should be present in each object. 
@@ -75,5 +77,7 @@ public final class AssetArg {
      * <p>Recommended
      */
     private DataArg data;
+
+    private Map<String, Object> ext;
 
 }

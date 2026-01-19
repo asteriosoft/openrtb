@@ -34,25 +34,25 @@ import java.util.Map;
 public final class AssetValue {
     /**
      * Unique asset ID, assigned by exchange, must match one of the asset IDs in request.
-     * <p>Required.
+     * <p><b>Required</b> if embedded asset is being used. <b>Optional</b> if assetsurl/dcourl is being used;
      */
     private Integer id;
     
     /**
-     * If asset is required value is 1. Default is 0.
+     * If asset is required value is 1 (bidder requires it to be displayed). Default is 0.
      * <p>Optional.
      */
     private Integer required;
     
     /**
      * Title object for title assets.
-     * <p>Recommended.
+     * <p>Optional.
      */
     private TitleValue title;
     
     /**
      * Image object for image assets.
-     * <p>Recommended.
+     * <p>Optional.
      */
     private ImgValue img;
     

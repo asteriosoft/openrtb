@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * The video object to be used for all video elements supported in the Native Ad. 
@@ -59,4 +60,6 @@ public final class VideoArg {
      * <p>Required 
      */
     private List<Integer> protocols;
+
+    private Map<String, Object> ext;
 }

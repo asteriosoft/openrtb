@@ -44,7 +44,9 @@ public final class DataValue {
     /**
      * The optional formatted string name of the data type to be displayed.
      * <p>Optional.
+     * @deprecated Absent in Native 1.2
      */
+    @Deprecated
     private String label;
     /**
      * Maximum length of the text in the element’s response.

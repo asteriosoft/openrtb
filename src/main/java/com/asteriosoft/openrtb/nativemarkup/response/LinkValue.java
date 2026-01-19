@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Used for ‘call to action’ assets, or other links from the Native ad.  This Object should be
@@ -48,4 +49,6 @@ public final class LinkValue {
      * <p>Optional
      */
     private String fallback;
+
+    private Map<String, Object> ext;
 }

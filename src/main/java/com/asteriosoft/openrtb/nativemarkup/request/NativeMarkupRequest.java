@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * The Native Object defines the native advertising opportunity available for bid via this bidrequest. 
@@ -41,21 +42,21 @@ public final class NativeMarkupRequest {
     private String ver;
     
     /**
-     * The context in which the ad appears
+     * The context in which the ad appears. {@link com.asteriosoft.openrtb.nativemarkup.NativeContext}
      * 
      * <p>Recommended
      */
     private Integer context;
     
     /**
-     * A more detailed context in which the ad appears
+     * A more detailed context in which the ad appears {@link com.asteriosoft.openrtb.nativemarkup.NativeSubContext}
      * 
      * <p>Optional
      */
     private Integer contextsubtype;
     
     /**
-     * The number of identical placements in this Layout
+     * The number of identical placements in this Layout {@link com.asteriosoft.openrtb.nativemarkup.NativePlacement}
      * 
      * <p>Recommended
      */
@@ -85,5 +86,32 @@ public final class NativeMarkupRequest {
      * <p>Required
      */
     private List<AssetArg> assets;
+
+    /**
+     * Whether the supply source / impression supports returning an assetsurl instead of an asset object.
+     * {@link com.asteriosoft.openrtb.nativemarkup.response.NativeMarkupResponse.assetsurl} <br/>
+     * 0 or the absence of the field indicates no such support.
+     */
+    private Integer aurlsupport;
+
+    /**
+     * Whether the supply source / impression supports returning a dco url instead of an asset object.
+     * {@link com.asteriosoft.openrtb.nativemarkup.response.NativeMarkupResponse.dcourl} <br/>
+     * 0 or the absence of the field indicates no such support. Beta feature
+     */
+    private Integer durlsupport;
+
+    /**
+     * Specifies what type of event tracking is supported
+     */
+    private List<EventTrackerRequest> eventtrackers;
+
+    /**
+     * Set to 1 when the native ad supports buyer-specific privacy notice.
+     * Set to 0 (or field absent) when the native ad doesn’t support custom privacy links or if support is unknown.
+     */
+    private Integer privacy;
+
+    private Map<String, Object> ext;
 
 }
