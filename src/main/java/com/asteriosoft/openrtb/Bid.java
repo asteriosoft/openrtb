@@ -93,10 +93,6 @@ public final class Bid {
      */
     private Object adm;
     /**
-     * Optional
-     */
-    private AdmObject admobject;
-    /**
      * ID of a preloaded ad to be served if the bid wins.
      */
     private String adid;
