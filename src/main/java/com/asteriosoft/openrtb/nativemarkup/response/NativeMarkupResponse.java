@@ -18,9 +18,13 @@
 
 package com.asteriosoft.openrtb.nativemarkup.response;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -91,4 +95,20 @@ public final class NativeMarkupResponse {
      * standard defined in this specification
      */
     private Map<String, Object> ext;
+
+    @JsonIgnore
+    private Map<String, Object> nonOpenRtbFields;
+
+    @JsonAnySetter
+    public void addNonOpenRtbField(String key, Object value) {
+        if (nonOpenRtbFields == null) {
+            nonOpenRtbFields = new HashMap<>();
+        }
+        nonOpenRtbFields.put(key, value);
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getNonOpenRtbFields() {
+        return nonOpenRtbFields;
+    }
 }

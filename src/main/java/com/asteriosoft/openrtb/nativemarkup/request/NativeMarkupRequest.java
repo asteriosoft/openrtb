@@ -18,9 +18,13 @@
 
 package com.asteriosoft.openrtb.nativemarkup.request;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -89,14 +93,14 @@ public final class NativeMarkupRequest {
 
     /**
      * Whether the supply source / impression supports returning an assetsurl instead of an asset object.
-     * {@link com.asteriosoft.openrtb.nativemarkup.response.NativeMarkupResponse.assetsurl} <br/>
+     * {@link com.asteriosoft.openrtb.nativemarkup.response.NativeMarkupResponse#assetsurl} <br/>
      * 0 or the absence of the field indicates no such support.
      */
     private Integer aurlsupport;
 
     /**
      * Whether the supply source / impression supports returning a dco url instead of an asset object.
-     * {@link com.asteriosoft.openrtb.nativemarkup.response.NativeMarkupResponse.dcourl} <br/>
+     * {@link com.asteriosoft.openrtb.nativemarkup.response.NativeMarkupResponse#dcourl} <br/>
      * 0 or the absence of the field indicates no such support. Beta feature
      */
     private Integer durlsupport;
@@ -113,5 +117,21 @@ public final class NativeMarkupRequest {
     private Integer privacy;
 
     private Map<String, Object> ext;
+
+    @JsonIgnore
+    private Map<String, Object> nonOpenRtbFields;
+
+    @JsonAnySetter
+    public void addNonOpenRtbField(String key, Object value) {
+        if (nonOpenRtbFields == null) {
+            nonOpenRtbFields = new HashMap<>();
+        }
+        nonOpenRtbFields.put(key, value);
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getNonOpenRtbFields() {
+        return nonOpenRtbFields;
+    }
 
 }
